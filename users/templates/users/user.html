@@ -1,0 +1,12 @@
+{% extends 'users/layout.html' %}
+
+{% block body %}
+
+    <h1>Welcome, {{ request.user.first_name }}</h1> <!-- resposta do user como primeiro nome -->
+                                                <!-- feito no django admin -->
+    <ul>
+        <li>Username: {{ request.user.username }}</li>
+        <li>Gmail: {{ request.user.email }}</li>
+    </ul> <!-- todas as infos sao do admin django -->
+    <a href="{% url 'logout' %}">Log Out</a>
+{% endblock %}
